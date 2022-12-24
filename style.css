@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+/* variables */
+
+
+:root{
+  /* colors: */
+  --mainBg: rgb(255,192,203);
+  --clockBg:rgb(255,239,213);
+  --timeBg:rgb(250,250,250);
+
+  --colorFonts:rgb(26 24 24 / 45%);
+
+/* border-radius:  */
+  --borderR: 27% 27%;
+    --borderRfLi: 15%;
+
+  /* box-shadow */
+  --shadowClock: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  --shadowFonts :rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+/* font-size:   */
+ --timeFont:43px;
+}
+
+
+
+
+body{
+  margin:0 auto;
+  text-alight:center;
+  display:flex;
+  justify-content:center;
+   background: var(--mainBg);
+}
+
+#clock{
+    display: flex;
+    background-color: var(--clockBg);
+    border-radius:var(--borderR);
+    box-shadow: var(--shadowClock);
+    margin: 12%;
+}
+#time{
+  list-style: none;
+  font-family: 'Rubik Vinyl', cursive;
+  font-size:var(--timeFont);
+  color:var(--colorFonts);
+  background-color: var(--timeBg);
+  border-radius: var(--borderR);
+  text-align: center;
+  position: relative;
+  padding: 34px;
+  border-radius: var(--borderR);
+  display: flex;
+
+}
+@media only screen and (max-width: 700px) {
+  #time{
+    display: block;
+  }
+}
+
+li{
+    width: 77px;
+    padding:12px;
+    background-color:var(--clockBg);
+    box-shadow: var( --shadowFonts);
+    margin: 8px;
+    border-radius: var(--borderRfLi);
+}
